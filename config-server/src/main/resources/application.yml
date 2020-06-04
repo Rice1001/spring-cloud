@@ -7,10 +7,9 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/Rice1001/spring-cloud-config
-          search-paths: config-repo
-          username: Rice1001
-          password: 1998403Rice
+          uri: https://github.com/Rice1001/spring-cloud-config.git
+          search-paths: /config-repo
+          skip-ssl-validation: true
 eureka:
   client:
     service-url:
