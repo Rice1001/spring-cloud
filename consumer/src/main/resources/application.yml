@@ -1,2 +1,10 @@
 server:
   port: 8082
+spring:
+  application:
+    name: consumer
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
+    fetch-registry: false

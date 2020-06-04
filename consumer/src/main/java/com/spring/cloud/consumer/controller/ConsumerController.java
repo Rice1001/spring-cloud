@@ -11,11 +11,11 @@ import org.springframework.web.client.RestTemplate;
  * @date 2020/6/2 20:28
  */
 @RestController
-@RequestMapping("consumer/")
+//@RequestMapping("/consumer")
 public class ConsumerController {
     private final String url = "http://localhost:8081/provider/get";
 
-    @RequestMapping("get")
+    @RequestMapping("/")
     public String get(){
         RestTemplate template = new RestTemplate();
         String data = template.getForObject(url,String.class);

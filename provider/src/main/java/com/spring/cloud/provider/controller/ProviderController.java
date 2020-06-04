@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @RestController
-@RequestMapping("provider")
+@RequestMapping("provider/")
 public class ProviderController {
 
     @RequestMapping("get")

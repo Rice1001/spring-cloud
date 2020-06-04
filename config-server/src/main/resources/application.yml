@@ -3,6 +3,10 @@ server:
 spring:
   application:
     name: config-server
+  http:
+    encoding:
+      charset: utf-8
+      force: true
   cloud:
     config:
       server:

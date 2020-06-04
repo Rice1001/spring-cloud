@@ -9,7 +9,11 @@ eureka:
       defaultZone: http://localhost:8080/eureka/
 zuul:
   routes:
-    providet.serviceId: Test-provider
-    provider.path: /test/**  #匹配指定的路径，资源匹配的路径才会拦截，转发
+    api-a:
+      path: /get/**
+      serviceId: consumer
+    api-b:
+      path: /test/**
+      serviceId: provider
   ignored-services: "*"
-  prefix: /server
+  prefix: /api/v1/demo

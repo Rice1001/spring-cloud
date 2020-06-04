@@ -1,17 +1,18 @@
 server:
   port: 8086
 spring:
-  application:
-    name: config-client
   cloud:
     config:
-      name: config-client
-      profile: pro
+      name: configtest
+      profile: dev
       label: master
       discovery:
         enabled: true
-        service-id: config-server
+      uri: http://localhost:8085/
+  application:
+    name: configtest
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8080/eureka/
+
